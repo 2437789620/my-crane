@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=EDGE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="/stj-web/static/stjsys/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $.migrateMute = true;
+    </script>
+    <script type="text/javascript" src="/stj-web/static/stjsys/plugins/jqmigrate.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stj-web/static/plugins/GC-ui2.0.0/css/gui.css">
+    <!-- <link rel="stylesheet" type="text/css"
+        href="/stj-web/static/plugins/layui-v2.4.5/layui/css/modules/layui-icon-extend/iconfont.css"> -->
+    <link rel="stylesheet" type="text/css" href="/stj-web/static/css/desktop/common.css">
+    <link rel="stylesheet" type="text/css" href="/stj-web/static/comm/css/hideTop.css">
+    <link rel="stylesheet" type="text/css" href="/stj-web/static/css/formSelects-v4.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/stj-web/static/plugins/busy-load/dist/app.min.css"> -->
+    <!-- <script src="/stj-web/static/plugins/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
+    <script src="/stj-web/static/plugins/busy-load/dist/app.min.js" charset="utf-8"></script> -->
+    <script type="text/javascript" src="/stj-web/static/js/polyfill.js?0.6509512115574514"></script>
+    <script type="text/javascript" src="/stj-web/static/comm/js/comm.js?0.2972518222247945"></script>
+    <script type="text/javascript" src="/stj-web/static/comm/js/columnHidden.js?0.8545920550422063"></script>
+    <script type="text/javascript" src="/stj-web/static/comm/js/hideTop.js?0.7691093684148688"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>安徽省特种设备检验业务系统报告</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 750px;
+            background-color: #F6F7FC;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .bj {
+            width: 100%;
+            height: 312px;
+            background-image: linear-gradient(#4fa5f8, #3670f6);
+            position: relative;
+        }
+
+        .bj-img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50px);
+        }
+
+        .bj-span {
+            width: 240px;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: bold;
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-120px);
+        }
+
+        .basic-box {
+            width: calc(100% - 20px);
+            position: absolute;
+            top: 180px;
+            left: 10px;
+        }
+
+        .item-box1 {
+            padding: 10px 15px 10px 26px;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
+            border-radius: 4px;
+        }
+
+        .outter-box {
+            margin-top: 10px;
+            padding: 10px 15px 10px 16px;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
+            border-radius: 4px;
+        }
+
+        .outter-title {
+            width: 100%;
+            text-align:left ;
+            font-size: 19px;
+            height: 30px;
+            line-height: 20px;
+        }
+
+        .inner-box {
+            padding: 0 10px;
+            box-sizing: border-box;
+            background-color: rgb(245, 247, 251)
+        }
+
+        .basic-item {
+            color: rgb(51, 51, 51);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 4px 0;
+            box-sizing: border-box;
+        }
+
+        .item-label {
+            width: 120px;
+            text-align-last: justify;
+        }
+
+        .label-color {
+            color: rgb(136, 137, 138);
+        }
+
+        .item-value {
+            width: calc(100% - 120px);
+            text-align: left;
+        }
+
+        .value-bold {
+            font-weight: bold;
+        }
+    </style>
+    <link id="layuicss-layer" rel="stylesheet"
+        href="http://117.68.0.190:9090/stj-web/static/plugins/layui-v2.4.5/layui/css/modules/layer/default/layer.css?v=3.1.1"
+        media="all">
+</head>
+
+<body style="text-align: center;">
+    <input type="hidden" id="equipmentQrcode"
+        value="com.ustcinfo.ishare.eip.stj.qrcode.entity.EquipmentQrcode@53dc6369">
+    <div class="container">
+        <div class="bj">
+            <img class="bj-img" src="./static/image/equipment.png" alt="">
+            <span class="bj-span">安徽省特种设备检验业务系统<br>检验报告概要</span>
+        </div>
+        <div class="basic-box">
+            <div class="item-box1">
+                <div class="basic-item">
+                    <span class="item-label">报告编号：</span>
+                    <span class="item-value value-bold">0QW4480-2408-E01274</span>
+                </div>
+                <div class="basic-item">
+                    <span class="item-label">业务类别：</span>
+                    <span class="item-value value-bold">流动式起重机委托检验</span>
+                </div>
+                <div class="basic-item">
+                    <span class="item-label">受检/使用单位：</span>
+                    <span class="item-value value-bold">安徽省国瑞设备租赁有限公司</span>
+                </div>
+                <div class="basic-item">
+                    <span class="item-label">检验结论：</span>
+                    <span class="item-value value-bold" style="color: #3670F6;">合格</span>
+                </div>
+            </div>
+            <div class="outter-box">
+                <div class="outter-title">
+                    检验信息
+                </div>
+                <div class="inner-box">
+                    <div class="basic-item">
+                        <span class="item-label label-color">检验单位：</span>
+                        <span class="item-value">安徽省特种设备检测院</span>
+                    </div>
+                    <div class="basic-item">
+                        <span class="item-label label-color">检验人员：</span>
+                        <span class="item-value">孙芒,袁思远,周永恒</span>
+                    </div>
+                    <div class="basic-item">
+                        <span class="item-label label-color">检验日期：</span>
+                        <span class="item-value">2024年08月08日</span>
+                    </div>
+                    <div class="basic-item">
+                        <span class="item-label label-color">下检日期：</span>
+                        <span class="item-value">2025年08月</span>
+                    </div>
+                </div>
+            </div>
+            <div class="outter-box">
+                <div class="outter-title">
+                    设备信息
+                </div>
+                <div class="inner-box">
+                    <div class="basic-item">
+                        <span class="item-label label-color">设备名称：</span>
+                        <span class="item-value">汽车起重机</span>
+                    </div>
+                    <div class="basic-item">
+                        <span class="item-label label-color">设备代码：</span>
+                        <span class="item-value"></span>
+                    </div>
+                    <div class="basic-item">
+                        <span class="item-label label-color">产品编号：</span>
+                        <span class="item-value">L5E6H3D29LA023667</span>
+                    </div>
+                    <div class="basic-item">
+                        <span class="item-label label-color">单位内编号：</span>
+                        <span class="item-value">皖AF2055</span>
+                    </div>
+                    <div class="basic-item">
+                        <span class="item-label label-color">使用地点：</span>
+                        <span class="item-value">无固定区域</span>
+                    </div>
+                    <div class="basic-item">
+                        <span class="item-label label-color">登记证发证日期：</span>
+                        <span class="item-value">2021年07月23日</span>
+                    </div>
+                    <div class="basic-item">
+                        <span class="item-label label-color">登记机关：</span>
+                        <span class="item-value"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

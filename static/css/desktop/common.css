@@ -1,0 +1,57 @@
+@charset "UTF-8";
+.up-down-box{
+    display: none;
+    position: absolute;
+    width: 240px;
+    left:420px;
+    top:40px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #333333;
+    max-height:300px;
+    overflow:auto;
+    text-align: left;
+    padding: 10px 10px;
+}
+.to-up,.to-down,.i-am-sure,.to-first{
+    cursor: pointer;
+}
+.i-am-sure{
+    width: 80px;
+    background-color:  #fb9437;
+    color: #ffffff!important;
+    text-align: center;
+    border-radius: 2px;
+}
+.i-am-sure:hover{
+    background-color: #d77f2f;
+}
+.to-up,.to-down,.to-first{
+    font-size: 18px;
+    padding: 5px 10px;
+    margin: 0 2px;
+}
+.to-up:hover,.to-down:hover,.to-first:hover{
+    color:#147efb;
+    font-weight: bold;
+}
+.filed-label{
+    display: block;
+    width: 80px;
+    float: left;
+}
+.up-down-box div{
+    color:#000;
+    font-size: 16px;
+}
+
+/*必须*/
+.table-inner-form .layui-input{
+    height:28px;
+    line-height: 28px;
+}
+/*.layui-table-body{*/
+    /*overflow: visible;*/
+/*}*/
+.layui-table-box{
+    overflow: visible;
+}

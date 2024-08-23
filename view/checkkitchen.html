@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Companible" content="ie=edge,chrome=1">
+  <title>隐患排查</title>
+  <link rel="shortcut icon" href="../static/favicon.ico">
+  <script type="text/javascript" src="../js/jquery-1.3.2.min.js"></script>
+</head>
+<body>
+ <div >
+   <div class='checkContainer'>
+      <div class="cooker" >
+          <p class="fog"></p>
+      </div>
+      <div class="lampblack " >
+      </div>
+      <div class="pan" >
+      </div>
+      <div class="glass " >
+      </div>
+      <div class="patch " >
+      </div>
+      <div class="light " >
+      </div>
+      <!-- <div id="cover"></div> -->
+      <div id="modal">
+         <div class="tipsBox" >
+           <p class="tipsText cooker_tip">电饭煲排气口上方有插座！</p>
+           <p class="tipsText lampblack_tip">油烟机机油过多，长时间未清理！</p>
+           <p class="tipsText pan_tip">灶台上烧菜，无人看管！</p>
+           <p class="tipsText glass_tip">插座应远离水源！</p>
+           <p class="tipsText light_tip">微波炉上禁止放置打火机！</p>
+         </div>
+         <div class="tipsBtn">
+            <p class="tipsClose"></p>
+         </div>
+      </div>
+      <div id="modalOver">
+      </div>
+      <!-- <div>
+            <p class="tipsClose"></p>
+      </div> -->
+
+      <div class="containerBottom">
+            <div class="box-bottom" >
+               <p class="checked unknown "></p>
+               <p class="checked unknown "></p>
+               <p class="checked unknown "></p>
+               <p class="checked unknown"></p>
+               <p class="checked unknown"></p>
+            </div>
+      </div>
+      <div class="backBtn">
+         <a class="back" href="../index.html"> </a>
+      </div>
+     
+   </div>
+   <style>
+    * { margin:0; padding:0px; }
+    .fog {
+        
+     }
+    .checkContainer {
+        position: relative;
+        overflow: hidden;
+        width: 1000px;
+        height: 667px;
+        left: 50%;
+        margin-left: -500px;
+        background: url("../static/check-kitchen.jpg")  no-repeat left center ;
+    }
+    .back {  
+        display:block ;height:41px; width:106px; background: url("../static/back.png")  no-repeat  center ;  }
+    .lampblack {
+        width:343px; height:126px;
+        position: absolute;
+        top:123px; left:298px;
+    }
+    .lampblack_danger {
+        background: url("../static/lampblack_danger.png")  no-repeat left center ; 
+    }
+
+    .pan {
+        width:102px; height:42px;
+        position: absolute;
+        top:309px; left:301px;
+    }
+    .pan_danger {
+        background: url("../static/pan_danger.png")  no-repeat left center ; 
+    }
+    .glass {
+        width:23px; height:58px;
+        position: absolute;
+        top:272px; left:72px;
+    }
+    .glass_danger {
+        background: url("../static/glass_danger.png")  no-repeat left center ; 
+    }
+    .patch {
+        width:114px; height:16px;
+        position: absolute;
+        top:385px; left:-16px;
+    }
+    .patch_danger {
+        background: url("../static/patch_danger.png")  no-repeat left center ; 
+    }
+    .light {
+        width:42px; height:52px;
+        position: absolute;
+        top:341px; right:0px;
+    }
+    .light_danger {
+        background: url("../static/light_danger.png")  no-repeat left center ; 
+    }
+    .cooker {
+        width:50px; height:98px;
+        position: absolute;
+        top:265px; right:292px;
+    }
+    .cooker_normal {
+        background: url("../static/cooker_normal.png")  no-repeat left center ; 
+    }
+    .cooker_danger {
+        background: url("../static/cooker_danger.png")  no-repeat left center ; 
+    }
+    #modal { 
+        position:absolute;
+        width:340px;
+        height:200px;
+        top:50%;
+        left:50%;
+        margin-left:-170px;
+        margin-top:-120px;
+        background-color:red;
+        display:none;
+        z-Index:9999;  
+        background:url('../static/model_bgc.png') no-repeat ;
+    }
+    #modalOver { 
+        position:absolute;
+        width:340px;
+        height:200px;
+        top:50%;
+        left:50%;
+        margin-left:-170px;
+        margin-top:-120px;
+        background-color:red;
+        display:none;
+        z-Index:9999;  
+        background:url('../static/success.png') no-repeat ;
+    }
+    .tipsBox {
+            height:60%;
+            line-height: 100px;
+            vertical-align: middle;
+            font-size: 20px;
+            color:#5E5E5E;
+            font-weight: bold;
+            text-align: center;
+        }
+    .tipsBtn {  height:40%; }
+    .tipsClose {
+        height:42px; width:110px; margin:0 auto;  cursor:pointer;
+        background: url('../static/confirm.png') no-repeat center;
+    }
+    .tipsText {
+      height:80%; vertical-align: middle; padding:20px;
+    }
+    .box-bottom {
+        width:80%;
+        height:135px;
+        display: flex;
+        position: absolute;
+        left:50%;
+        margin-left:-400px;
+        bottom:50px;
+    }
+    .checked {
+        flex:1;
+        background:url('../static/unknow.png') no-repeat  center
+    }
+    .unknown { 
+        flex:1;
+        background:url('../static/unknow.png') no-repeat  center
+    }
+    .lampblack_know {
+        background-image:url('../static/lampblack_know.png')
+    }
+    .cooker_know{
+        background-image:url('../static/cooker_know.png') ;
+    }
+    .glass_know{
+        background-image:url('../static/glass_know.png');
+    }
+    .pan_know{
+        background-image:url('../static/pan_know.png');
+    }
+    .light_know{
+        background-image:url('../static/light_know.png');
+    }
+    .backBtn {
+        position: absolute;
+        right:14px;
+        bottom:30px;
+    }
+  </style>
+   <script>
+    $(document).ready(function(){ 
+        var cooker = false
+        var selectedArr = [{'cooker':false, 'lampblack':false,'glass':false,'light':false,'pan':false}] 
+        modal.style.display="none";
+        $('.cooker').click(function(){
+            cooker = true
+           $('.cooker').addClass('cooker_danger')
+            getModal();
+            $('.cooker_tip').show();
+            $('.checked:eq(0)').removeClass('unknown').addClass('cooker_know')
+            selectedArr.map( item => {
+                if  (!item.cooker){
+                    item.cooker = true
+                }
+                return
+            })
+        });
+
+       $('.lampblack').click(function(){
+         $('.lampblack').addClass('lampblack_danger');
+            getModal();
+            $('.lampblack_tip').show();
+            $('.checked:eq(1)').removeClass('unknown').addClass('lampblack_know')
+            selectedArr.map( item => {
+                if  (!item.lampblack){
+                    item.lampblack = true
+                }
+                return
+            })
+        });
+
+        $('.pan').click(function(){
+         $('.pan').addClass('pan_danger');
+            getModal();
+            $('.pan_tip').show();
+            $('.checked:eq(2)').removeClass('unknown').addClass('pan_know')
+            selectedArr.map( item => {
+                if  (!item.pan){
+                    item.pan = true
+                }
+                return
+            })
+        });
+
+        $('.glass').click(function(){
+         $('.glass').addClass('glass_danger');
+         $('.patch').addClass('patch_danger');
+            getModal();
+            $('.glass_tip').show();
+            $('.checked:eq(3)').removeClass('unknown').addClass('glass_know')
+            selectedArr.map( item => {
+                if  (!item.glass){
+                    item.glass = true
+                }
+                return
+            })
+        });
+
+        $('.light').click(function(){
+         $('.light').addClass('light_danger');
+            getModal();
+            $('.light_tip').show();
+            $('.checked:eq(4)').removeClass('unknown').addClass('light_know')
+            selectedArr.map( item => {
+                if  (!item.light){
+                    item.light = true
+                }
+                return
+            })
+        });
+
+        // 返回
+        $('.back').click(function(){
+         
+        });
+       
+         $(".tipsClose").click(function() {
+          modal.style.display="none";   //隐藏弹出层
+          // 判断selectedArr    排查成功
+        selectedArr.map( item => {
+              if(item.cooker && item.lampblack   && item.glass  && item.light  && item.pan) {
+                  console.log(  selectedArr)
+                $("#modalOver").css("display","block")
+              }
+          })
+        })
+
+        function getModal(){
+            modal.style.display="block";   //显示弹出层
+            $('.tipsText').hide();
+        }
+
+  })
+   
+   </script>
+</body>
+</html>

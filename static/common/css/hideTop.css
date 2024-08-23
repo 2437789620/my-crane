@@ -1,0 +1,34 @@
+#hideTop {
+    position: relative;
+    height: 5px;
+    background: url(../../images/inspect/report/reportInput/arrow_up.png) center no-repeat;
+    z-index: 999;
+    cursor: pointer;
+}
+
+#hideTop.down-arrow{
+    position: relative;
+    height: 5px;
+    background: url(../../images/inspect/report/reportInput/arrow_down.png) center no-repeat;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.layui-table-header-fixed{
+	top:0;
+	left:0;
+	right:0;
+	z-index:1000;
+	position:fixed;
+}
+
+.layui-table-header-fixed-1{
+	position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.layui-table-fixed {
+	z-index: 1001 !important;
+}
